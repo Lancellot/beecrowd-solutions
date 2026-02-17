@@ -8,6 +8,7 @@ Praticar lógica, algoritmos e estruturas de dados.
 
 ## 🚀 Linguagens
 
+- TypeScript
 - JavaScript
 - Python
 
