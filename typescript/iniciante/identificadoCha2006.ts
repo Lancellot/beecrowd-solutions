@@ -1,15 +1,18 @@
+import * as fs from "node:fs";
+
+const input = fs.readFileSync(0, "utf8").trim().split(/\s+/).map(Number);
+
+const T = input[0]!;
+const votos = input.slice(1, 6);
+
 const identificaCha = (cha: number, votos: number[]): number => {
-    
-    let acerto: number = 0;
-    for (let voto of votos) {
-        if (voto === cha) {
-            acerto++;
-        }
+    let acerto = 0;
+
+    for (const voto of votos) {
+        if (voto === cha) acerto++;
     }
+
     return acerto;
 };
 
-const votos: number[] = [1, 3, 3, 4, 5 ];
-const cha: number = 3;
-
-console.log(identificaCha(cha, votos));
+console.log(identificaCha(T, votos));
