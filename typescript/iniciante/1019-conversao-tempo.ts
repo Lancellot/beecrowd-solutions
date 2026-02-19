@@ -16,3 +16,13 @@ const conversaoTempo = (totalSegundos: number): string => {
 };
 
 console.log(conversaoTempo(valorEntrada));
+
+const conversaoTempo = (totalSegundos: number): string => {
+    const horas: number = Math.floor(totalSegundos / 3600);
+    const minutos: number = Math.floor((totalSegundos % 3600) / 60);
+    const segundos: number = totalSegundos % 60;
+
+    return `${horas}:${minutos}:${segundos}`;
+};
+
+console.log(conversaoTempo(valorEntrada));
