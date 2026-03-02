@@ -9,7 +9,7 @@ const c: number = input[2]!;
 const triangulo = (a: number, b: number, c: number): string => {
 
     const isTriangulo = (a < b + c) && (b < a + c) && (c < a + b);
-    return isTriangulo ? "Perimetro = " + (a + b + c) : "Area = " + ((a + b) * c / 2).toFixed(1);
+    return isTriangulo ? "Perimetro = " + (a + b + c).toFixed(1) : "Area = " + ((a + b) * c / 2).toFixed(1);
 }
 
 console.log(triangulo(a, b, c));
