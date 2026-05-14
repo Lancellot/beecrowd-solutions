@@ -11,11 +11,9 @@ const intervalo = (): void => {
     const valores = input.slice(1, entrada + 1);
 
     for (const numeros of valores) {
-        if (numeros >= 10 && numeros <= 20) {
-            dentro.push(numeros);
-        } else {
-            fora.push(numeros);
-        }
+
+        (numeros >= 10 && numeros <= 20) ? dentro.push(numeros) : fora.push(numeros);
+        
     }
 
     console.log(`${dentro.length} in`);
