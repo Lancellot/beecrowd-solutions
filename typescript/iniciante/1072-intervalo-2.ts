@@ -8,7 +8,7 @@ const entrada = input[0]!;
 const intervalo = (): void => {
     let dentro: number[] = [];
     let fora: number[] = [];
-    const valores = input.slice(0, entrada + 1);
+    const valores = input.slice(1, entrada + 1);
 
     for (const numeros of valores) {
         if (numeros >= 10 && numeros <= 20) {
