@@ -1,11 +1,10 @@
 import * as fs from "node:fs";
 
-const input = fs.readFileSync(0, "utf8").trim();
+const input = fs.readFileSync(0, "utf8").trim().split("\n");
 
-const entrada = Number(input);
+const n = Number(input[0]);
 
 const parOuImpar = (num: number): string => {
-
     if (num === 0) return "NULL";
 
     if (num % 2 === 0) {
@@ -13,6 +12,9 @@ const parOuImpar = (num: number): string => {
     }
 
     return num > 0 ? "ODD POSITIVE" : "ODD NEGATIVE";
-}
+};
 
-console.log(parOuImpar(entrada));
+for (let i = 1; i <= n; i++) {
+    const valor = Number(input[i]);
+    console.log(parOuImpar(valor));
+}
